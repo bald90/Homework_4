@@ -5,21 +5,13 @@
 
 Console.Clear();
 
-int DataEntry(string str)                         // Метод ввода данных
-{
-    Console.WriteLine(str);
-    int number = int.Parse(Console.ReadLine());
-    return number;
-}
-
 int[] FillArray(int[] array)                      // Метод создания рандомного массива
 {
     int length = array.Length;
-    int index = 0;
     for (int i = 0; i < length; i++)
     {
-        array[i] = new Random().Next(0, 10);     // положить новое рандомное число в индекс из диапазона 0-10
-        array[1] = 52;                           //поставил искусственно, чтобы как в примере преобладали однозначные числа
+        array[i] = new Random().Next(0, 10);     // Рандомайзер чисел от 0 до 10
+        array[1] = 52;                           // Поставил искусственно, чтобы как в примере преобладали однозначные числа
         array[6] = 21;
     }
     return array;
